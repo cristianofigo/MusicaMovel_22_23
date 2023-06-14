@@ -95,6 +95,13 @@ var select_menu = new Nexus.Select('#menu_cenas',{
   'options': cenas
 })
 
+setTimeout(() => {
+ select_menu.value = "cena2";
+  }, 3000);
+
+
+
+
 select_menu.on('change',function(v) {
   if(select_menu.value === "cena1"){
     wavesurfer.clearRegions();
