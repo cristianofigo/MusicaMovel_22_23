@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Música Móvel</title>
+     <h1>Música Móvel Web - 2023</h1>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    
+  <script src="https://unpkg.com/wavesurfer.js@6.6.3/dist/wavesurfer.js"></script>
+    
+  <script src="https://unpkg.com/wavesurfer.js@6.6.3/dist/plugin/wavesurfer.regions.min.js"></script>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js" integrity="sha512-jduERlz7En1IUZR54bqzpNI64AbffZWR//KJgF71SJ8D8/liKFZ+s1RxmUmB+bhCnIfzebdZsULwOrbVB5f3nQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/nexusui@latest/dist/NexusUI.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+  
+    <!-- ABRE | Painel de Controles de Áudio ------------------------->
+      <div class="control-painel">
+        <!-- Play -->
+        <div id="play_">
+          <div id="play_o"></div>
+          <p>Play</p>
+        </div>
+          
+        <!-- BPM -->
+        <div id="bpmdiv">
+          <div id="slider_bpm"></div>
+          <div id="bpm_n"></div>
+          <p>BPM</p>
+        </div>
+        
+        <!-- Loops -->
+        <div id="loops_">
+          <div id="loops_o"></div>
+          <p>Loop Sample</p>
+        </div>
+        
+          
+        <!-- Distorção -->
+        <div id="dist_">
+          <div id="slider_dist"></div>
+          <p>Distorção</p>
+        </div>
+          
+        <!-- Filtro -->
+        <div id="slfiltro">
+          <div id="slider_filtro"></div>
+          <p>Filtro</p>
+        </div>
+          
+      </div>
+          
+    <!-- FECHA | Painel de Controles de Áudio ------------------------->
+      
+    <!-- ABRE | Painel Wavesufer ------------------------->
+      <div class=" wavesufer-painel">
+        <!--Wavesufer Faixa 1-->
+        <div class="wavesufer-faixa1">
+          <label>Faixa 1</label>
+          <div id="waveform"></div>
+          <div class="wavesufer-faixa1-controls">
+            <div id="radiobutton"></div>
+            <div id="pan1"></div>
+          </div>
+          <div id="button">
+            <input id="bt" type="checkbox">
+          </div>
+          
+          <!--Wavesufer Faixa 2-->
+          <div class="wavesufer-faixa2">
+            <label>Faixa 2</label>
+            <div id="waveform2"></div>
+            <div class="wavesufer-faixa2-controls">
+              <div id="radiobutton2"></div>
+              <div id="pan2"></div>
+            </div>
+            <div id="button2">
+              <input id="bt2" type="checkbox">
+            </div>
+          </div>
+        
+      </div>
+
+      
+    <!-- FECHA | Painel Wavesufer ------------------------->
+      <div class="radiobutton"></div>
+      
+      <div id="menu_cenas"></div>
+      <div id="piano"></div>
+      <div id="fatias"></div>
+        
+      <div id="mixer"></div>
+      
+  <!-- ABRE | Painel Sequencer ------------------------->
+    <div class="sequencer-painel">
+        <div class="sequencer-faixa1">
+          <label>Sequencer: Faixa 1</label>
+          <div id="sequencer"></div>
+        </div>
+        <div class="sequencer-faixa2">
+          <label>Sequencer: Faixa 2</label>
+          <div id="sequencer2"></div>
+        </div>
+        <button onclick="saveSequence()">Salvar</button>
+      </div>
+      
+    </main>
+    
+  <!-- FECHA | Painel Sequencer ----------------------------->
+    
+    <script src="padroes.js"></script>
+     <script src="sequencia.js"></script>
+   <script src="sketch.js"></script>
+    
+  </body>
+</html>
